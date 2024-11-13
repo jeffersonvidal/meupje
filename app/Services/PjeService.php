@@ -49,7 +49,7 @@ class PjeService
             $movimentacoes[] = [
                 'data' => (string) $mov->data,
                 'descricao' => (string) $mov->descricao,
-                'documento' => (string) $mov->documento, // URL ou base64 de PDF
+                'documento' => (string) $mov->documento,
             ];
         }
 

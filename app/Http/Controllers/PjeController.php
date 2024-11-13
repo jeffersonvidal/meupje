@@ -14,11 +14,16 @@ class PjeController extends Controller
         $this->pjeService = $pjeService;
     }
 
+    public function showForm()
+    {
+        return view('consulta');
+    }
+
     public function consultarProcesso(Request $request)
     {
         $numeroProcesso = $request->input('numero_processo');
         $movimentacoes = $this->pjeService->consultarProcesso($numeroProcesso);
 
-        return response()->json($movimentacoes);
+        return view('consulta', ['movimentacoes' => $movimentacoes]);
     }
 }
