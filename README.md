@@ -1,24 +1,10 @@
-# JurisControl - Sistema de Controle Jurídico
+# Meu PJe
 
-<p>Sistema ERP de Gestão e Controle Jurídico para Escritórios Advocatícios.</p>
+<p>Aplicação para consumir webservice MNI PJe do CNJ com PHP.</p>
 
 ## Projeto
-* Repositório: https://github.com/jeffersonvidal/juriscontrol.git
-
-## Fazer deploy do sistema na hospedagem Hostinger
-https://medium.com/@anushujan/deploying-a-laravel-11-project-on-hostinger-using-web-hosting-eca710e024f0
-
-### Sistemas que inspiram recursos
-* EasyJur (dashboard, movimentações, jurisprudencias(wescrapping))
-* AdvBox (taskscore, tarefas recorrentes)
-* easyvog
-* Astrea
-* Promad
-* MaisJuridico
-
-## Paleta de cores Identidade Visual
-* Marrom: #50301E
-* Dourado: #C8A472
+* Repositório: https://github.com/jeffersonvidal/meupje.git
+* Documentação oficial: https://www.pje.jus.br/wiki/index.php/Tutorial_MNI
 
 ## Requisitos
 * Laravel 11 ou superior
@@ -38,26 +24,9 @@ Instalar as dependências do NodeJS
 ```
 npm install
 ```
-Instalar Boostrap com Vite
-```
-npm i --save bootstrap @popperjs/core
-```
-Executar Bibliotecas NodeJS
-```
-npm run dev
-```
-Instalar Ícones FontAwesome
-```
-npm i --save @fortawesome/fontawesome-free
-```
 Gerar chave artisan do projeto
 ```
 php artisan key:generate
-```
-```
-Gerar arquivo de configuração CORS
-```
-php artisan config:publish cors
 ```
 Inciar o projeto criado com Laravel
 ```
@@ -132,50 +101,10 @@ php artisan make:component alert --view
 
 ## Instalar dependências para fazer auditoria do sistema
 
-Instalar dependência para fazer auditoria
+instale o pacote guzzlehttp/guzzle para fazer requisições HTTP e laravel-ide-helper para ajudar no desenvolvimento
 ```
-composer require owen-it/laravel-auditing
-```
-Publicar a configuração e as migrations para auditoria
-```
-php artisan vendor:publish --provider "OwenIt\Auditing\AuditingServiceProvider" --tag="config"
-```
-Criar tabela audits no BD atavés de migration
-```
-php artisan vendor:publish --provider "OwenIt\Auditing\AuditingServiceProvider" --tag="migrations"
-```
-Caso não funcione a implementação de auditoria, limpe o cache
-```
-php artisan config:clear
-```
-Acrescentar linha em todas as Models que serão auditadas
-```
-use \OwenIt\Auditing\Auditable as AuditingAuditable;
-use OwenIt\Auditing\Contracts\Auditable;
-
-Modelo:
-class Client extends Model implements Auditable
-{
-    use HasFactory, AuditingAuditable;
-```
-
-## Mensagens de alertas em modal
-
-SweetAlert2
-```
-npm install sweetalert2
-```
-
-## Campo select com busca
-
-Select2
-```
-npm install select2
-```
-
-Tema do Bootstrap 5 para Select2
-```
-npm install select2-bootstrap-5-theme
+composer require guzzlehttp/guzzle
+composer require --dev barryvdh/laravel-ide-helper
 ```
 
 ## Bibliotecas dependentes
@@ -215,9 +144,10 @@ APP_LOCALE=pt_BR
 ## Recursos a serem implementados
 
 []-  Consulta a manifestações de processo
-    [x]-  Usuários
-    [x]-  Escritórios Externos
-    []-  Gamificação
+  []- Manifestações (atualizações, movimentações);
+  []- Arquivos anexos (pdf);
+[]- Verificação de atualizações automáticas
+  []-  
 
 
 ## APIs Externas
