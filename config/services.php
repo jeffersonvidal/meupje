@@ -34,5 +34,9 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'pje' => [ 
+        'base_url' => 'https://wwwh.cnj.jus.br/pjemni-2x/intercomunicacao', 
+        'wsdl' => 'https://wwwh.cnj.jus.br/pjemni-2x/intercomunicacao?wsdl', 
+    ],
 
 ];

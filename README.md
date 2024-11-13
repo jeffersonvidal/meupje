@@ -137,6 +137,7 @@ php artisan vendor:publish --tag=laravel-pt-br-localization
 
 // Para versões 11.x altere a linha 8 do arquivo .env
 APP_LOCALE=pt_BR
+APP_TIMEZONE=America/Sao_Paulo
 ```
 
 
